@@ -12,6 +12,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ruhulmus/model/JwtRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ruhulmus/model/JwtRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ruhulmus/model/JwtResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ruhulmus/model/JwtResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ruhulmus/service/JwtUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ruhulmus/service/JwtUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +93,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1643541364460</updated>
-      <workItem from="1643541366058" duration="2823000" />
+      <workItem from="1643541366058" duration="2947000" />
     </task>
     <servers />
   </component>
