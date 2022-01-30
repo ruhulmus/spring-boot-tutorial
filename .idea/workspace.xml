@@ -6,18 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="1db03b05-2dcb-4121-92ce-90b4d3a5e903" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruhulmus/config/JwtAuthenticationEntryPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ruhulmus/config/JwtAuthenticationEntryPoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruhulmus/config/JwtTokenUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ruhulmus/config/JwtTokenUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruhulmus/controller/HelloWorldController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ruhulmus/controller/AuthenticationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruhulmus/model/JwtRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ruhulmus/model/JwtRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruhulmus/model/JwtResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ruhulmus/model/JwtResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ruhulmus/config/JwtRequestFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ruhulmus/config/JwtRequestFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ruhulmus/service/JwtUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ruhulmus/service/JwtUserDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -30,6 +28,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
+    <property name="ExpandSpringBootSpringBootSettingsPanel" value="false" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -37,9 +40,29 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunManager">
+    <configuration default="true" type="DjangoTestsConfigurationType">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -74,15 +97,93 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
+    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Python.FlaskServer">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
     <configuration name="SpringBootJWT" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="spring-boot-jwt" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.ruhulmus.SpringBootJWT" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="ALTERNATIVE_JRE_PATH" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_301.jdk/Contents/Home" />
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
       <option name="SHORTEN_COMMAND_LINE" value="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method v="2" />
     </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -94,6 +195,7 @@
       <option name="presentableId" value="Default" />
       <updated>1643541364460</updated>
       <workItem from="1643541366058" duration="2947000" />
+      <workItem from="1643547756662" duration="1289000" />
     </task>
     <servers />
   </component>
@@ -110,5 +212,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
