@@ -1,7 +1,5 @@
 package com.ruhulmus.service;
-
 import java.util.ArrayList;
-
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -13,6 +11,7 @@ public class JwtUserDetailsService implements UserDetailsService {
 
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+		// Static Username and password provided for testing purpose. You need check this user credentials from database
 		if ("ruhul".equals(username)) {
 			return new User(
 					"ruhul",
