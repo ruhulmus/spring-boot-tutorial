@@ -15,9 +15,11 @@ Make a POST request with url http://localhost:8089/authenticate.
 Body should have valid username and password. Here I used username : "ruhul" and password : "password".  Please make sure that body should be in JSON format.
 If username and password is valid then it will return a token and success Response with 200 Status code.
 *Example is below :*
+Generate JWT Token ![view](https://github.com/ruhulmus/spring-boot-tutorial/blob/main/spring-boot-JWT/assets/Generate-JWT-Token.png)
 
 #### Validate JWT Token & Make Rest Api call :
 
 Try to access the url http://localhost:8089/testuri using the above generated token in the header as Bearer Token.
 If the Authorization Bearer token is valid it will be return a valid response.
 *Example is below:*
+Authenticate JWT Token ![view](https://github.com/ruhulmus/spring-boot-tutorial/blob/main/spring-boot-JWT/assets/Authenticate-JWT-token.png)
