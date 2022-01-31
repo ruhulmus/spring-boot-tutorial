@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1db03b05-2dcb-4121-92ce-90b4d3a5e903" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +40,11 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="DjangoTestsConfigurationType">
@@ -194,6 +200,7 @@
       <updated>1643541364460</updated>
       <workItem from="1643541366058" duration="2947000" />
       <workItem from="1643547756662" duration="5355000" />
+      <workItem from="1643604680048" duration="739000" />
     </task>
     <servers />
   </component>
