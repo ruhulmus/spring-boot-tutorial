@@ -3,6 +3,7 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
+import com.ruhulmus.constant.FieldConstraints;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -11,20 +12,20 @@ import lombok.Setter;
 public class UserAdd {
     @Size.List({
             @Size(
-                    min = FieldConstraints.ForUser.MIN_FIRST_NAME_LENGTH,
+                    min = FieldConstraints.User.MIN_FIRST_NAME_LENGTH,
                     message = "First Name must have at least {min} characters"),
             @Size(
-                    max = FieldConstraints.ForUser.MAX_FIRST_NAME_LENGTH,
+                    max = FieldConstraints.User.MAX_FIRST_NAME_LENGTH,
                     message = "First Name can have at most {max} characters")
     })
     private String firstName;
 
     @Size.List({
             @Size(
-                    min = FieldConstraints.ForUser.MIN_LAST_NAME_LENGTH,
+                    min = FieldConstraints.User.MIN_LAST_NAME_LENGTH,
                     message = "Last Name must have at least {min} characters"),
             @Size(
-                    max = FieldConstraints.ForUser.MAX_LAST_NAME_LENGTH,
+                    max = FieldConstraints.User.MAX_LAST_NAME_LENGTH,
                     message = "Last Name can have at most {max} characters")
     })
     private String lastName;
@@ -32,10 +33,10 @@ public class UserAdd {
 
     @Size.List({
             @Size(
-                    min = FieldConstraints.ForUser.MIN_USERNAME_LENGTH,
+                    min = FieldConstraints.User.MIN_USERNAME_LENGTH,
                     message = "Username must have at least {min} characters"),
             @Size(
-                    max = FieldConstraints.ForUser.MAX_USERNAME_LENGTH,
+                    max = FieldConstraints.User.MAX_USERNAME_LENGTH,
                     message = "Username can have at most {max} characters")
     })
 
@@ -43,33 +44,23 @@ public class UserAdd {
     private String userName;
     @Size.List({
             @Size(
-                    min = FieldConstraints.ForUser.MIN_EMAIL_LENGTH,
+                    min = FieldConstraints.User.MIN_EMAIL_LENGTH,
                     message = "Email Address must have at least {min} characters"),
             @Size(
-                    max = FieldConstraints.ForUser.MAX_EMAIL_LENGTH,
+                    max = FieldConstraints.User.MAX_EMAIL_LENGTH,
                     message = "Email Address can have at most {max} characters")
     })
 
     @Email
     @NotEmpty(message = "Email Address can't be empty")
     private String emailAddress;
-    @Size.List({
-            @Size(
-                    min = FieldConstraints.ForUser.MIN_PASSWORD_LENGTH,
-                    message = "Password must have at least {min} characters"),
-            @Size(
-                    max = FieldConstraints.ForUser.MAX_PASSWORD_LENGTH,
-                    message = "Password can have at most {max} characters")
-    })
 
-    @NotEmpty(message = "Password can't be empty")
-    private String password;
     @Size.List({
             @Size(
-                    min = FieldConstraints.ForUser.MIN_PHONE_NUMBER_LENGTH,
+                    min = FieldConstraints.User.MIN_PHONE_NUMBER_LENGTH,
                     message = "Phone Number must have at least {min} characters"),
             @Size(
-                    max = FieldConstraints.ForUser.MAX_PHONE_NUMBER_LENGTH,
+                    max = FieldConstraints.User.MAX_PHONE_NUMBER_LENGTH,
                     message = "Phone Number can have at most {max} characters")
     })
 
