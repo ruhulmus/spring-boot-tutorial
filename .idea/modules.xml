@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/spring-boot-jwt.iml" filepath="$PROJECT_DIR$/spring-boot-jwt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-rest-example.iml" filepath="$PROJECT_DIR$/spring-boot-rest-example.iml" />
     </modules>
   </component>
 </project>

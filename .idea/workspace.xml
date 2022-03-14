@@ -4,208 +4,118 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1db03b05-2dcb-4121-92ce-90b4d3a5e903" name="Changes" comment="">
+    <list default="true" id="94571596-76f1-43cb-9266-b58cd5a0b4e5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_9_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_9_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_9_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_jsonwebtoken_jjwt_0_9_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_3_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_2_0_1_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_11_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_11_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_0_13_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_2_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_25.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_1_1_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_1_1_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_1_1_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_1_1_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_1_1_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_1_1_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_1_1_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_1_1_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_1_2_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_1_2_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_1_2_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_1_3_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_1_3_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_1_3_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_1_3_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_1_3_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_1_3_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_1_3_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_1_3_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_23.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-boot-Actuator/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-Actuator/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-Actuator/src/main/java/com/ruhulmus/SpringBootActuator.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-Actuator/src/main/java/com/ruhulmus/SpringBootActuator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-Actuator/src/main/java/com/ruhulmus/config/JwtAuthenticationEntryPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-Actuator/src/main/java/com/ruhulmus/config/JwtAuthenticationEntryPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-Actuator/src/main/java/com/ruhulmus/config/JwtRequestFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-Actuator/src/main/java/com/ruhulmus/config/JwtRequestFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-Actuator/src/main/java/com/ruhulmus/config/JwtTokenUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-Actuator/src/main/java/com/ruhulmus/config/JwtTokenUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-Actuator/src/main/java/com/ruhulmus/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-Actuator/src/main/java/com/ruhulmus/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-Actuator/src/main/java/com/ruhulmus/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-Actuator/src/main/java/com/ruhulmus/controller/AuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-Actuator/src/main/java/com/ruhulmus/controller/JwtAuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-Actuator/src/main/java/com/ruhulmus/controller/JwtAuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-Actuator/src/main/java/com/ruhulmus/model/JwtRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-Actuator/src/main/java/com/ruhulmus/model/JwtRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-Actuator/src/main/java/com/ruhulmus/model/JwtResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-Actuator/src/main/java/com/ruhulmus/model/JwtResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-Actuator/src/main/java/com/ruhulmus/service/JwtUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-Actuator/src/main/java/com/ruhulmus/service/JwtUserDetailsService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-boot-Actuator/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-Actuator/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-JWT/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-JWT/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-JWT/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-JWT/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-JWT/src/main/java/com/ruhulmus/SpringBootJWT.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-JWT/src/main/java/com/ruhulmus/SpringBootJWT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-JWT/src/main/java/com/ruhulmus/config/JwtAuthenticationEntryPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-JWT/src/main/java/com/ruhulmus/config/JwtAuthenticationEntryPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-JWT/src/main/java/com/ruhulmus/config/JwtRequestFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-JWT/src/main/java/com/ruhulmus/config/JwtRequestFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-JWT/src/main/java/com/ruhulmus/config/JwtTokenUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-JWT/src/main/java/com/ruhulmus/config/JwtTokenUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-JWT/src/main/java/com/ruhulmus/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-JWT/src/main/java/com/ruhulmus/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-JWT/src/main/java/com/ruhulmus/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-JWT/src/main/java/com/ruhulmus/controller/AuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-JWT/src/main/java/com/ruhulmus/controller/JwtAuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-JWT/src/main/java/com/ruhulmus/controller/JwtAuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-JWT/src/main/java/com/ruhulmus/model/JwtRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-JWT/src/main/java/com/ruhulmus/model/JwtRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-JWT/src/main/java/com/ruhulmus/model/JwtResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-JWT/src/main/java/com/ruhulmus/model/JwtResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-JWT/src/main/java/com/ruhulmus/service/JwtUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-JWT/src/main/java/com/ruhulmus/service/JwtUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-docker/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-docker/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-docker/src/main/java/com/ruhulmus/SpringBootDocker.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-docker/src/main/java/com/ruhulmus/SpringBootDocker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-docker/src/main/java/com/ruhulmus/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-docker/src/main/java/com/ruhulmus/controller/HelloController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
-    <execution />
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="24Po0sLfoi7MAGhOUlkHBTpAJVU" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="26MQ1ooFbSNpfjcv2khauZLzQsH" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
-    <property name="ExpandSpringBootSpringBootSettingsPanel" value="false" />
-    <property name="RequestMappingsPanelOrder0" value="0" />
-    <property name="RequestMappingsPanelOrder1" value="1" />
-    <property name="RequestMappingsPanelWidth0" value="75" />
-    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="SDKs" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.2" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-    </key>
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="DjangoTestsConfigurationType">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="TARGET" value="" />
-      <option name="SETTINGS_FILE" value="" />
-      <option name="CUSTOM_SETTINGS" value="false" />
-      <option name="USE_OPTIONS" value="false" />
-      <option name="OPTIONS" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="ADDITIONAL_ARGS" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="Python.FlaskServer">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="Tox" factoryName="Tox">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Doctests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
-      <MavenSettings>
-        <option name="myGeneralSettings" />
-        <option name="myRunnerSettings" />
-        <option name="myRunnerParameters">
-          <MavenRunnerParameters>
-            <option name="profiles">
-              <set />
-            </option>
-            <option name="goals">
-              <list />
-            </option>
-            <option name="pomFileName" />
-            <option name="profilesMap">
-              <map />
-            </option>
-            <option name="resolveToWorkspace" value="false" />
-            <option name="workingDirPath" value="$PROJECT_DIR$" />
-          </MavenRunnerParameters>
-        </option>
-      </MavenSettings>
-      <method v="2" />
-    </configuration>
-    <configuration name="SpringBootJWT" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="spring-boot-jwt" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ruhulmus.SpringBootJWT" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
-      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="1db03b05-2dcb-4121-92ce-90b4d3a5e903" name="Changes" comment="" />
-      <created>1643541364460</created>
+      <changelist id="94571596-76f1-43cb-9266-b58cd5a0b4e5" name="Changes" comment="" />
+      <created>1647230767031</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1643541364460</updated>
-      <workItem from="1643541366058" duration="2947000" />
-      <workItem from="1643547756662" duration="5355000" />
-      <workItem from="1643604680048" duration="4651000" />
+      <updated>1647230767031</updated>
+      <workItem from="1647230770980" duration="26000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

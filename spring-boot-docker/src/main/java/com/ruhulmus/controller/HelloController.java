@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @CrossOrigin()
 public class HelloController {
-	@RequestMapping({ "/testuri" })
-	public String hello() {
-		return "Hello World !! Rest Controller is working ...";
-	}
+    @RequestMapping({"/testuri"})
+    public String hello() {
+        return "Hello World !! Rest Controller is working ...";
+    }
 }
