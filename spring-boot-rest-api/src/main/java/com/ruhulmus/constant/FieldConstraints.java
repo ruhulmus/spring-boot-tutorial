@@ -1,6 +1,7 @@
 package com.ruhulmus.constant;
 
 public class FieldConstraints {
+
     public class User{
         public static final int MAX_NAME_LENGTH = 24;
         public static final int MIN_NAME_LENGTH = 1;
