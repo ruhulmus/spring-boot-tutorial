@@ -12,24 +12,13 @@ import lombok.Setter;
 public class UserAdd {
     @Size.List({
             @Size(
-                    min = FieldConstraints.User.MIN_FIRST_NAME_LENGTH,
-                    message = "First Name must have at least {min} characters"),
+                    max = FieldConstraints.User.MAX_NAME_LENGTH,
+                    message = "First Name can have at most {max} characters"),
             @Size(
-                    max = FieldConstraints.User.MAX_FIRST_NAME_LENGTH,
-                    message = "First Name can have at most {max} characters")
+                    min = FieldConstraints.User.MIN_NAME_LENGTH,
+                    message = "First Name must have at least {min} characters")
     })
-    private String firstName;
-
-    @Size.List({
-            @Size(
-                    min = FieldConstraints.User.MIN_LAST_NAME_LENGTH,
-                    message = "Last Name must have at least {min} characters"),
-            @Size(
-                    max = FieldConstraints.User.MAX_LAST_NAME_LENGTH,
-                    message = "Last Name can have at most {max} characters")
-    })
-    private String lastName;
-
+    private String fullName;
 
     @Size.List({
             @Size(
