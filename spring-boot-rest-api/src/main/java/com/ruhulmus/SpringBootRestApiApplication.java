@@ -1,4 +1,4 @@
-package com.ruhulmus.springbootrestapi;
+package com.ruhulmus;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

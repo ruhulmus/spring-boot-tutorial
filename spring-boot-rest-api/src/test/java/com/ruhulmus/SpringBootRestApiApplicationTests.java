@@ -1,4 +1,4 @@
-package com.ruhulmus.springbootrestapi;
+package com.ruhulmus;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
