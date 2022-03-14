@@ -1,2 +1,4 @@
-package com.ruhulmus.dto.user;public class User {
+package com.ruhulmus.dto.user;
+
+public class User {
 }
