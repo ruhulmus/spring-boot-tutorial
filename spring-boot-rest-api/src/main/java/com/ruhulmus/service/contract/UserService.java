@@ -1,7 +1,8 @@
 package com.ruhulmus.service.contract;
 
-import com.ruhulmus.dto.user.request.User;
+import com.ruhulmus.dto.user.request.UserDto;
+import com.ruhulmus.persistence.entity.User;
 
 public interface UserService {
-    User add(User user);
+    UserDto add(UserDto userDto);
 }

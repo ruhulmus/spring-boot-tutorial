@@ -9,7 +9,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class User {
+public class UserDto {
     @Size.List({
             @Size(
                     max = FieldConstraints.User.MAX_NAME_LENGTH,
