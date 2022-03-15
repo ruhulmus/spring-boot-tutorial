@@ -13,6 +13,14 @@ public class UserServiceImpl implements UserService {
 
   @Override
   public UserDto add(UserDto userDto){
-        return userRepository.save(userDto);
+      User user = new User();
+      user.setFullName(userDto.getFullName());
+      user.setUserName(userDto.getUserName());
+      user.setEmailAddress(userDto.getEmailAddress());
+      user.setPhoneNumber(userDto.getPhoneNumber());
+      user.setAddress(userDto.getAddress());
+
+      userRepository.save(user);
+      return userDto;
   }
 }
