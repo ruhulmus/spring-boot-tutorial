@@ -9,9 +9,11 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
+import java.util.List;
 
 @RestController
-@RequestMapping(path = "/user", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+//@RequestMapping(path = "/user", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(path = "/user")
 public class UserController {
 
     private final UserService userService;
@@ -21,6 +23,12 @@ public class UserController {
     }
     @Autowired
     private UserRepository userRepository;
+
+    @GetMapping(path = "/list")
+    @ResponseStatus(HttpStatus.OK)
+    public List<User> list() {
+        return userService.list();
+    }
 
     @PostMapping(path = "/add")
     //return 201 instead of 200

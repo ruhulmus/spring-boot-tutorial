@@ -6,21 +6,30 @@ import com.ruhulmus.service.contract.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 public class UserServiceImpl implements UserService {
     @Autowired
     private UserRepository userRepository;
 
-  @Override
-  public UserDto add(UserDto userDto){
-      User user = new User();
-      user.setFullName(userDto.getFullName());
-      user.setUserName(userDto.getUserName());
-      user.setEmailAddress(userDto.getEmailAddress());
-      user.setPhoneNumber(userDto.getPhoneNumber());
-      user.setAddress(userDto.getAddress());
+    @Override
+    public UserDto add(UserDto userDto) {
+        User user = new User();
+        user.setFullName(userDto.getFullName());
+        user.setUserName(userDto.getUserName());
+        user.setEmailAddress(userDto.getEmailAddress());
+        user.setPhoneNumber(userDto.getPhoneNumber());
+        user.setAddress(userDto.getAddress());
+        userRepository.save(user);
 
-      userRepository.save(user);
-      return userDto;
-  }
+        return userDto;
+    }
+
+    @Override
+    public List<User> list() {
+        List<User> userList = userRepository.findAll();
+        return userList;
+    }
 }
