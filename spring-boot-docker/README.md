@@ -175,6 +175,29 @@ COPY ${JAR_FILE} dockerapp.jar
 # java -jar /opt/app/dockerapp.jar
 ENTRYPOINT ["java","-jar","dockerapp.jar"]
 ```
+### Docker Build, Run :
 
-
+For Docker Build we need to use below command. `sudo docker build -t name:tag .`
+Here `spring-boot-docker` docker image name and `1.0` is tag name.
+```cmd
+sudo docker build -t spring-boot-docker:1.0 .
+```
+```cmd
+$ docker build -t spring-boot-docker:1.0 .
+[+] Building 2.4s (8/8) FINISHED                                                                                                                              
+ => [internal] load build definition from Dockerfile                                                                                                     0.0s
+ => => transferring dockerfile: 37B                                                                                                                      0.0s
+ => [internal] load .dockerignore                                                                                                                        0.0s
+ => => transferring context: 2B                                                                                                                          0.0s
+ => [internal] load metadata for docker.io/library/openjdk:8-jdk-alpine                                                                                  1.4s
+ => [1/3] FROM docker.io/library/openjdk:8-jdk-alpine@sha256:94792824df2df33402f201713f932b58cb9de94a0cd524164a0f2283343547b3                            0.0s
+ => [internal] load build context                                                                                                                        0.6s
+ => => transferring context: 17.57MB                                                                                                                     0.6s
+ => CACHED [2/3] WORKDIR /opt/dockerapp                                                                                                                  0.0s
+ => [3/3] COPY target/spring-boot-docker-0.0.1-SNAPSHOT.jar dockerapp.jar                                                                                0.1s
+ => exporting to image                                                                                                                                   0.1s
+ => => exporting layers                                                                                                                                  0.1s
+ => => writing image sha256:410f40671c59364ebc49de60b01ad4e452a1b36221cf945fcaed47fef6da8c0d                                                             0.0s
+ => => naming to docker.io/library/spring-boot-docker:1.0
+```
 So we are done with configuring `docker` with our `springboot` applications.
