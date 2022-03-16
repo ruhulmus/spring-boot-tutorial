@@ -230,5 +230,4 @@ Stop a container by container id :
 ```cmd
 $ sudo docker stop 96c5adab1759
 ```
-
-So we are done with configuring `docker` with our `springboot` applications.
+So we are done with configuring `docker` with our `springboot` application.
