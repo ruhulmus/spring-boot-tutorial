@@ -68,7 +68,7 @@ public class SpringBootDocker {
 }
 ```
 
-
+Create a test controller `HelloController` and a api endpoint for `/testuri` 
 
 ```java
 package com.ruhulmus.controller;
@@ -87,40 +87,7 @@ public class HelloController {
 }
 ```
 
-### Configure `Log4J2AsyncLoggerException.java` Class :
-Create another logger class `Log4J2AsyncLoggerException.java` to create and check exceptions.
-
-```java
-package org.apache.logging.log4j.async;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
-public class Log4J2AsyncLoggerException {
-
-    private static final Logger logger = LogManager.getLogger(Log4J2AsyncLoggerException.class);
-
-    public static void main(String[] args) {
-
-        try {
-            System.out.println(getException());
-        } catch (IllegalArgumentException e) {
-            logger.error("{}", e);
-        }
-    }
-
-    static int getException() throws IllegalArgumentException {
-        throw new IllegalArgumentException("Hello, Something Went Wrong. Exception Occured!!");
-    }
-
-}
-```
-
-To **Enable** all loggers to asynchronous, we need 2 things :
-
-1. Need to be present `disruptor` in project class path.
-2. Set system property `log4j2.contextSelector=org.apache.logging.log4j.core.async.AsyncLoggerContextSelector`
-
+ 
 ### **Springboot Run**
 Now Run the below commands :
 
