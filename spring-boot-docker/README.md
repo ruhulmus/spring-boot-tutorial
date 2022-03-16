@@ -177,11 +177,14 @@ ENTRYPOINT ["java","-jar","dockerapp.jar"]
 ```
 ### Docker Build, Run :
 
-For Docker Build we need to use below command. `sudo docker build -t name:tag .`
-Here `spring-boot-docker` docker image name and `1.0` is tag name.
+For Docker Build we need to use below command.
 ```cmd
+#sudo docker build -t name:tag .
 sudo docker build -t spring-boot-docker:1.0 .
 ```
+Here `spring-boot-docker` is image name and `1.0` is a tag name.
+
+
 ```cmd
 $ docker build -t spring-boot-docker:1.0 .
 [+] Building 2.4s (8/8) FINISHED                                                                                                                              
