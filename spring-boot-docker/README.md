@@ -136,23 +136,31 @@ $ java -jar target/spring-boot-docker-0.0.1-SNAPSHOT.jar
 ```
 It will run the jar file into `8089` Port (as we set the `server.port=8089` on `application.properties` file). The Output should be look like this in your terminal :
 ```cmd
-2022-03-16 15:52:34.107  INFO 5297 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8089 (http)
-2022-03-16 15:52:34.137  INFO 5297 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-03-16 15:52:34.137  INFO 5297 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
-2022-03-16 15:52:34.287  INFO 5297 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-03-16 15:52:34.287  INFO 5297 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1907 ms
-2022-03-16 15:52:34.554  INFO 5297 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-03-16 15:52:34.848  INFO 5297 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path ''
-2022-03-16 15:52:34.852  INFO 5297 --- [           main] com.ruhulmus.SpringBootDocker            : Started SpringBootDocker in 4.027 seconds (JVM running for 5.352)
+2021-03-16 15:52:34.107  INFO 5297 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8089 (http)
+2021-03-16 15:52:34.137  INFO 5297 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-16 15:52:34.137  INFO 5297 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2021-03-16 15:52:34.287  INFO 5297 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-16 15:52:34.287  INFO 5297 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1907 ms
+2021-03-16 15:52:34.554  INFO 5297 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-16 15:52:34.848  INFO 5297 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path ''
+2021-03-16 15:52:34.852  INFO 5297 --- [           main] com.ruhulmus.SpringBootDocker            : Started SpringBootDocker in 4.027 seconds (JVM running for 5.352)
 ```
 
 
-##Docker Configuration :
+## Docker Configuration :
 We have created `Dockerfile` at the root of the project.
 We only need this Dockerfile text file to `dockerize` the Spring Boot application.
 
 ### `Dockerfile` file :
 A Dockerfile is a text file, contains all the commands to assemble the docker image. let's start configure the docker file
+
+It creates a docker image base on `openjdk:8-jdk-alpine`, an [alpine linux](https://alpinelinux.org/) with `openjdk8` installed. 
+
+ 
+we can find more base images from the official [Docker Hub](https://hub.docker.com/u/adoptopenjdk)
+Here I use `openjdk8` as base image
+
+### A complete `Dockerfile` example.
 
 ```cmd
 # For Java 11, try this
