@@ -182,7 +182,7 @@ For Docker Build we need to use below command.
 #sudo docker build -t name:tag .
 sudo docker build -t spring-boot-docker:1.0 .
 ```
-Here `spring-boot-docker` is name and `1.0` is a tag name.
+Here `spring-boot-docker` is container name and `1.0` is a tag name.
 
 Output should be look like : 
 ```cmd
@@ -203,7 +203,15 @@ $ docker build -t spring-boot-docker:1.0 .
  => => writing image sha256:410f40671c59364ebc49de60b01ad4e452a1b36221cf945fcaed47fef6da8c0d                                                             0.0s
  => => naming to docker.io/library/spring-boot-docker:1.0
 ```
+Now run the container in below command
 
+```cmd
+sudo docker run -d -p 9000:8089 -t spring-boot-docker:1.0
+```
 
+Now container running port `9000` mapping with `8089` is application runing
+
+Here `run -d` to start the container in detach mode – run the container in the background.
+and `run -p` to map ports.
 
 So we are done with configuring `docker` with our `springboot` applications.
