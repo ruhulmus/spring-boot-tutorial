@@ -203,15 +203,14 @@ $ docker build -t spring-boot-docker:1.0 .
  => => writing image sha256:410f40671c59364ebc49de60b01ad4e452a1b36221cf945fcaed47fef6da8c0d                                                             0.0s
  => => naming to docker.io/library/spring-boot-docker:1.0
 ```
-Now run the container in below command
+Run the container in the background. use below command.
 
 ```cmd
 sudo docker run -d -p 9000:8089 -t spring-boot-docker:1.0
 ```
+Now container running port `9000` mapping with `8089` is application running
 
-Now container running port `9000` mapping with `8089` is application runing
-
-Here `run -d` to start the container in detach mode – run the container in the background.
-and `run -p` to map ports.
+`run -d` to start the container in detach mode.
+`run -p` to map ports.
 
 So we are done with configuring `docker` with our `springboot` applications.
