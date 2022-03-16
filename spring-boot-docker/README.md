@@ -7,6 +7,8 @@ We have created `Dockerfile` at the root of the project.
 We only need this Dockerfile text file to dockerize the Spring Boot application.
 
 
+### Maven `pom.xml` :
+Project dependencies. Nothing special here, just some Spring Boot dependencies.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -48,137 +50,40 @@ We only need this Dockerfile text file to dockerize the Spring Boot application.
 
 </project>
 ```
-
-### Add disruptor Dependancy :
-
-Add disruptor in `pom.xml` file
-
-```xml
-<dependency>
-    <groupId>com.lmax</groupId>
-    <artifactId>disruptor</artifactId>
-    <version>3.4.2</version>
-</dependency>
-```
-
-
-### Configure `log4j2.xml` file for Log4J 2 async logger :
-We will use XML to configure Log4J2 2 async logger.
-Now Create a `log4j2.xml` file in the project classpath.
-
-1. *Add basic configuration*
-
-Path : `src/resources/log4j2.xml`
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<Configuration status="DEBUG">
-    <Appenders>
-        <Console name="LogToConsole" target="SYSTEM_OUT">
-            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
-        </Console>
-    </Appenders>
-    <Loggers>
-        <Logger name="org.apache.logging.log4j.async" level="debug" additivity="false">
-            <AppenderRef ref="LogToConsole"/>
-        </Logger>
-        <Root level="error">
-            <AppenderRef ref="LogToConsole"/>
-        </Root>
-    </Loggers>
-</Configuration>
-```
-2. *Now add `RollingRandomAccessFile` Sections into `Appenders`  to configure the rolling log files*
-
-```xml
- <RollingRandomAccessFile name="LogToRollingRandomAccessFile" fileName="logs/app.log"
-                                 filePattern="logs/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log">
-    <PatternLayout>
-        <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
-    </PatternLayout>
-    <Policies>
-        <TimeBasedTriggeringPolicy/>
-        <SizeBasedTriggeringPolicy size="3 MB"/>
-    </Policies>
-    <DefaultRolloverStrategy max="5"/>
-</RollingRandomAccessFile>
-
-
-```
-3. *Now add `AsyncAppender` Appender into the `Loggers` sections. So after the configuraiton, `log4j2.xml` file should be look like :*
-
-```xml
-<Configuration status="DEBUG">
-    <Appenders>
-        <Console name="LogToConsole" target="SYSTEM_OUT">
-            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
-        </Console>
-        <RollingRandomAccessFile name="LogToRollingRandomAccessFile" fileName="logs/app.log"
-                                 filePattern="logs/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log">
-            <PatternLayout>
-                <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
-            </PatternLayout>
-            <Policies>
-                <TimeBasedTriggeringPolicy/>
-                <SizeBasedTriggeringPolicy size="3 MB"/>
-            </Policies>
-            <DefaultRolloverStrategy max="5"/>
-        </RollingRandomAccessFile>
-
-    </Appenders>
-    <Loggers>
-
-        <!--  asynchronous loggers -->
-        <AsyncLogger name="org.apache.logging.log4j.async" level="debug" additivity="false">
-            <AppenderRef ref="LogToRollingRandomAccessFile"/>
-            <AppenderRef ref="LogToConsole"/>
-        </AsyncLogger>
-        
-    </Loggers>
-</Configuration>
-```
+ 
 *We can change the status to `trace`, `debug`, `info`, `warn`,  and `fatal` to enable the internal Log4j events.*
 
-### Configure `Log4J2AsyncLogger.java` Class :
-Now create a logger class `Log4J2AsyncLogger.java` that uses the Log4J2 API to log the messages.
+### Configure `@SpringBootApplication` Class :
+@SpringBootApplication to start everything, and also a controller to return a page.
+
+```javapackage com.ruhulmus;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class SpringBootDocker {
+    public static void main(String[] args) {
+        SpringApplication.run(SpringBootDocker.class, args);
+    }
+}
+```
+
+
 
 ```java
-package org.apache.logging.log4j.async;
+package com.ruhulmus.controller;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-public class Log4J2AsyncLogger {
-
-    private static final Logger logger = LogManager.getLogger(Log4J2AsyncLogger.class);
-
-    public static void main(String[] args) {
-
-        Log4J2AsyncLogger myLog = new Log4J2AsyncLogger();
-        myLog.getLog("Log4j2 Log");
-
-    }
-
-    private void getLog(String param){
-
-        logger.info("This is a info log");
-
-        // Previously, need to check the log level log to increase performance
-        if(logger.isDebugEnabled()){
-            logger.debug("This is debug log with param : " + param);
-        }
-
-        if(logger.isWarnEnabled()){
-            logger.info("This is warn log with param : " + param);
-        }
-
-        // In Java 8, No need to check the log level, we can do this
-        while (true) //for test rolling file
-            logger.debug("Hello print {}", () -> getValue());
-    }
-
-    static String getValue() {
-        return "Debug Log";
+@RestController
+@CrossOrigin()
+public class HelloController {
+    @RequestMapping({"/testuri"})
+    public String hello() {
+        return "Hello World !! Rest Controller is working ...";
     }
 }
 ```
