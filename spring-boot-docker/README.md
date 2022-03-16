@@ -182,7 +182,7 @@ For Docker Build we need to use below command.
 #sudo docker build -t name:tag .
 sudo docker build -t spring-boot-docker:1.0 .
 ```
-Here `spring-boot-docker` is image name and `1.0` is a tag name.
+Here `spring-boot-docker` is name and `1.0` is a tag name.
 
 Output should be look like : 
 ```cmd
