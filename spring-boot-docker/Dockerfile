@@ -1,7 +1,7 @@
-# For Java 11, try this
+# For Java 11
 #FROM adoptopenjdk/openjdk11:alpine-jre
 
-# For Java 8, try this
+# For Java 8
 FROM openjdk:8-jdk-alpine
 
 # cd /opt/dockerapp
@@ -13,7 +13,7 @@ ARG JAR_FILE=target/spring-boot-docker-0.0.1-SNAPSHOT.jar
 # cp target/spring-boot-docker-0.0.1-SNAPSHOT.jar /opt/dockerapp/dockerapp.jar
 COPY ${JAR_FILE} dockerapp.jar
 
-# java -jar /opt/app/dockerapp.jar
+# java -jar /opt/dockerapp/dockerapp.jar
 ENTRYPOINT ["java","-jar","dockerapp.jar"]
 
 ## sudo docker build -t spring-boot-docker:1.0 .
