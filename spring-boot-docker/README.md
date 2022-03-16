@@ -165,7 +165,27 @@ FROM openjdk:8-jdk-alpine
 ```
 Update the working directory:
 ```cmd
+# cd /opt/dockerapp
+WORKDIR /opt/dockerapp
+```
+Update the working directory:
+```cmd
+# cd /opt/dockerapp
+WORKDIR /opt/dockerapp
+```
+Declare a variable `JAR_FILE` and add assigned value `target/spring-boot-docker-0.0.1-SNAPSHOT.jar` :
+```cmd
+ARG JAR_FILE=target/spring-boot-docker-0.0.1-SNAPSHOT.jar
+```
+Copy `target/spring-boot-docker-0.0.1-SNAPSHOT.jar` to `/opt/dockerapp/dockerapp.jar` (renamed the `JAR` file name into Working directory)
+```cmd
+# cp target/spring-boot-docker-0.0.1-SNAPSHOT.jar /opt/dockerapp/dockerapp.jar
+COPY ${JAR_FILE} dockerapp.jar
+```
+Run the jar file with `ENTRYPOINT` like `# java -jar /opt/dockerapp/dockerapp.jar` .
 
+```cmd
+ENTRYPOINT ["java","-jar","dockerapp.jar"]
 ```
 
 ### A complete `Dockerfile` example.
