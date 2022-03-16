@@ -4,13 +4,13 @@
 # For Java 8, try this
 FROM openjdk:8-jdk-alpine
 
-# cd /opt/app
-WORKDIR /opt/app
+# cd /opt/dockerapp
+WORKDIR /opt/dockerapp
 
 # Refer to Maven build -> finalName
 ARG JAR_FILE=target/spring-boot-docker-0.0.1-SNAPSHOT.jar
 
-# cp target/spring-boot-docker-0.0.1-SNAPSHOT.jar /opt/app/dockerapp.jar
+# cp target/spring-boot-docker-0.0.1-SNAPSHOT.jar /opt/dockerapp/dockerapp.jar
 COPY ${JAR_FILE} dockerapp.jar
 
 # java -jar /opt/app/dockerapp.jar
