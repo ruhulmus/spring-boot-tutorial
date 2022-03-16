@@ -52,7 +52,7 @@ Project dependencies. Nothing special here, just some Spring Boot dependencies.
 *We can change the status to `trace`, `debug`, `info`, `warn`,  and `fatal` to enable the internal Log4j events.*
 
 ### Configure `@SpringBootApplication` Class :
-@SpringBootApplication to start everything, and also a controller to return a page.
+`@SpringBootApplication` to start everything.
 
 ```java
 package com.ruhulmus;
@@ -87,7 +87,6 @@ public class HelloController {
 }
 ```
 
- 
 ### **Springboot Run**
 Now Run the below commands :
 
