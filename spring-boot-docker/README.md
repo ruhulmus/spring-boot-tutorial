@@ -184,7 +184,7 @@ sudo docker build -t spring-boot-docker:1.0 .
 ```
 Here `spring-boot-docker` is image name and `1.0` is a tag name.
 
-
+Output should be look like : 
 ```cmd
 $ docker build -t spring-boot-docker:1.0 .
 [+] Building 2.4s (8/8) FINISHED                                                                                                                              
@@ -203,4 +203,7 @@ $ docker build -t spring-boot-docker:1.0 .
  => => writing image sha256:410f40671c59364ebc49de60b01ad4e452a1b36221cf945fcaed47fef6da8c0d                                                             0.0s
  => => naming to docker.io/library/spring-boot-docker:1.0
 ```
+
+
+
 So we are done with configuring `docker` with our `springboot` applications.
