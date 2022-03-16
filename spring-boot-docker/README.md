@@ -153,12 +153,20 @@ We only need this Dockerfile text file to `dockerize` the Spring Boot applicatio
 
 ### `Dockerfile` file :
 A Dockerfile is a text file, contains all the commands to assemble the docker image. let's start configure the docker file
-
-It creates a docker image base on `openjdk:8-jdk-alpine`, an [alpine linux](https://alpinelinux.org/) with `openjdk8` installed. 
-
  
 we can find more base images from the official [Docker Hub](https://hub.docker.com/u/adoptopenjdk)
-Here I use `openjdk8` as base image
+Here I use `openjdk8` as base image.
+
+It creates a docker image base on `openjdk:8-jdk-alpine`, an [alpine linux](https://alpinelinux.org/) with `openjdk8` installed.
+
+```cmd
+# For Java 8, try this
+FROM openjdk:8-jdk-alpine
+```
+Update the working directory:
+```cmd
+
+```
 
 ### A complete `Dockerfile` example.
 
