@@ -3,8 +3,7 @@
 ## Spring boot Docker Example
 
 ### Maven Folder Structure :
-We have created `Dockerfile` at the root of the project.
-We only need this Dockerfile text file to `dockerize` the Spring Boot application.
+
 
 ### Maven `pom.xml` :
 Project dependencies. Nothing special here, just some Spring Boot dependencies.
@@ -146,5 +145,34 @@ It will run the jar file into `8089` Port (as we set the `server.port=8089` on `
 2022-03-16 15:52:34.848  INFO 5297 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path ''
 2022-03-16 15:52:34.852  INFO 5297 --- [           main] com.ruhulmus.SpringBootDocker            : Started SpringBootDocker in 4.027 seconds (JVM running for 5.352)
 ```
+
+
+##Docker Configuration :
+We have created `Dockerfile` at the root of the project.
+We only need this Dockerfile text file to `dockerize` the Spring Boot application.
+
+### `Dockerfile` file :
+A Dockerfile is a text file, contains all the commands to assemble the docker image. let's start configure the docker file
+
+```cmd
+# For Java 11, try this
+#FROM adoptopenjdk/openjdk11:alpine-jre
+
+# For Java 8, try this
+FROM openjdk:8-jdk-alpine
+
+# Refer to Maven build -> finalName
+ARG JAR_FILE=target/spring-boot-docker-0.0.1-SNAPSHOT.jar
+
+# cd /opt/app
+WORKDIR /opt/app
+
+# cp target/spring-boot-docker-0.0.1-SNAPSHOT.jar /opt/app/dockerapp.jar
+COPY ${JAR_FILE} dockerapp.jar
+
+# java -jar /opt/app/dockerapp.jar
+ENTRYPOINT ["java","-jar","dockerapp.jar"]
+```
+
 
 So we are done with configuring `docker` with our `springboot` applications.
