@@ -48,9 +48,12 @@ Project dependencies. Nothing special here, just some Spring Boot dependencies.
 
 </project>
 ```
- 
-*We can change the status to `trace`, `debug`, `info`, `warn`,  and `fatal` to enable the internal Log4j events.*
+ ### `application.properties` file : 
+Define application run port '8089'
 
+ ```yml
+server.port=8089
+ ```
 ### Configure `@SpringBootApplication` Class :
 `@SpringBootApplication` to start everything.
 
@@ -94,7 +97,7 @@ Now Run the below commands :
 $ cd spring-boot-docker
 $ mvn clean install
 ```
-It will build a jar `/spring-boot-docker-0.0.1-SNAPSHOT.jar` file under the `target` Location
+It will build a jar `spring-boot-docker-0.0.1-SNAPSHOT.jar` file under the `target` Location
 
 Now run another commend to run our build jar.
 ```cmd
@@ -111,7 +114,7 @@ It will run the jar file into `8089` Port (as we set the `server.port=8089` on `
 2021-03-16 15:52:34.848  INFO 5297 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path ''
 2021-03-16 15:52:34.852  INFO 5297 --- [           main] com.ruhulmus.SpringBootDocker            : Started SpringBootDocker in 4.027 seconds (JVM running for 5.352)
 ```
-
+So that means our spring boot application is working fine.
 
 ## Docker Configuration :
 We have created `Dockerfile` at the root of the project.
@@ -127,31 +130,31 @@ It creates a docker image base on `openjdk:8-jdk-alpine`, an [alpine linux](http
 
 ```cmd
 # For Java 8, try this
-FROM openjdk:8-jdk-alpine
+$ FROM openjdk:8-jdk-alpine
 ```
 Update the working directory:
 ```cmd
 # cd /opt/dockerapp
-WORKDIR /opt/dockerapp
+$ WORKDIR /opt/dockerapp
 ```
 Update the working directory:
 ```cmd
 # cd /opt/dockerapp
-WORKDIR /opt/dockerapp
+$ WORKDIR /opt/dockerapp
 ```
 Declare a variable `JAR_FILE` and add assigned value `target/spring-boot-docker-0.0.1-SNAPSHOT.jar` :
 ```cmd
-ARG JAR_FILE=target/spring-boot-docker-0.0.1-SNAPSHOT.jar
+$ ARG JAR_FILE=target/spring-boot-docker-0.0.1-SNAPSHOT.jar
 ```
 Copy `target/spring-boot-docker-0.0.1-SNAPSHOT.jar` to `/opt/dockerapp/dockerapp.jar` (renamed the `JAR` file name into Working directory)
 ```cmd
 # cp target/spring-boot-docker-0.0.1-SNAPSHOT.jar /opt/dockerapp/dockerapp.jar
-COPY ${JAR_FILE} dockerapp.jar
+$ COPY ${JAR_FILE} dockerapp.jar
 ```
 Run the jar file with `ENTRYPOINT` like `# java -jar /opt/dockerapp/dockerapp.jar` .
 
 ```cmd
-ENTRYPOINT ["java","-jar","dockerapp.jar"]
+$ ENTRYPOINT ["java","-jar","dockerapp.jar"]
 ```
 
 ### A complete `Dockerfile` example.
@@ -161,19 +164,19 @@ ENTRYPOINT ["java","-jar","dockerapp.jar"]
 #FROM adoptopenjdk/openjdk11:alpine-jre
 
 # For Java 8, try this
-FROM openjdk:8-jdk-alpine
+$ FROM openjdk:8-jdk-alpine
 
 # Refer to Maven build -> finalName
-ARG JAR_FILE=target/spring-boot-docker-0.0.1-SNAPSHOT.jar
+$ ARG JAR_FILE=target/spring-boot-docker-0.0.1-SNAPSHOT.jar
 
 # cd /opt/app
-WORKDIR /opt/app
+$ WORKDIR /opt/app
 
 # cp target/spring-boot-docker-0.0.1-SNAPSHOT.jar /opt/app/dockerapp.jar
-COPY ${JAR_FILE} dockerapp.jar
+$ COPY ${JAR_FILE} dockerapp.jar
 
 # java -jar /opt/app/dockerapp.jar
-ENTRYPOINT ["java","-jar","dockerapp.jar"]
+$ ENTRYPOINT ["java","-jar","dockerapp.jar"]
 ```
 ### Docker Build, Run :
 
@@ -211,5 +214,21 @@ sudo docker run -d -p 9000:8089 -t spring-boot-docker:1.0
 Now container run in `9000` port and it's mapping with application port `8089`.
 Here `run -d` to start the container in detach mode.
 Here `run -p` to map ports between docker container and application.
+
+
+To see List of all containers:
+```cmd
+sudo docker ps
+```
+output :
+```cmd
+$ sudo docker ps
+CONTAINER ID   IMAGE                    COMMAND                  CREATED         STATUS         PORTS                    NAMES
+96c5adab1759   spring-boot-docker:1.0   "java -jar dockerapp…"   8 minutes ago   Up 8 minutes   0.0.0.0:9000->8089/tcp   cranky_kapitsa
+```
+Stop a container by container id :
+```cmd
+sudo docker stop 96c5adab1759
+```
 
 So we are done with configuring `docker` with our `springboot` applications.
