@@ -56,7 +56,8 @@ Project dependencies. Nothing special here, just some Spring Boot dependencies.
 ### Configure `@SpringBootApplication` Class :
 @SpringBootApplication to start everything, and also a controller to return a page.
 
-```javapackage com.ruhulmus;
+```java
+package com.ruhulmus;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -122,32 +123,30 @@ To **Enable** all loggers to asynchronous, we need 2 things :
 1. Need to be present `disruptor` in project class path.
 2. Set system property `log4j2.contextSelector=org.apache.logging.log4j.core.async.AsyncLoggerContextSelector`
 
-### **Asynchronous Loggers**
+### **Springboot Run**
 Now Run the below commands :
 
-It will build a jar `log4j2-1.0.0.jar` file under the `target` Location
 ```cmd
-$ mvn clean package
+$ cd spring-boot-docker
+$ mvn clean install
+```
+It will build a jar `/spring-boot-docker-0.0.1-SNAPSHOT.jar` file under the `target` Location
+
+Now run another commend to run our build jar.
+```cmd
+$ java -jar target/spring-boot-docker-0.0.1-SNAPSHOT.jar
+```
+It will run the jar file into `8089` Port (as we set the `server.port=8089` on `application.properties` file). The Output should be look like this in your terminal :
+```cmd
+2022-03-16 15:52:34.107  INFO 5297 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8089 (http)
+2022-03-16 15:52:34.137  INFO 5297 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-16 15:52:34.137  INFO 5297 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2022-03-16 15:52:34.287  INFO 5297 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-16 15:52:34.287  INFO 5297 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1907 ms
+2022-03-16 15:52:34.554  INFO 5297 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-03-16 15:52:34.848  INFO 5297 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path ''
+2022-03-16 15:52:34.852  INFO 5297 --- [           main] com.ruhulmus.SpringBootDocker            : Started SpringBootDocker in 4.027 seconds (JVM running for 5.352)
 ```
 
-
-Run another commend with Log4j 2 configuration in `debug` status.
-```cmd
-$ java -Dlog4j2.contextSelector=org.apache.logging.log4j.core.async.AsyncLoggerContextSelector -jar target/log4j2-1.0.0.jar
-```
-The Output should be l0ok like this in your terminal :
-```cmd
-2022-02-21 16:55:31,637 main DEBUG Registering MBean org.apache.logging.log4j2:type=AsyncContext@464bee09
-2022-02-21 16:55:32,638 main DEBUG Registering MBean org.apache.logging.log4j2:type=AsyncContext@464bee09,component=AsyncLoggerRingBuffer
-2022-02-21 16:55:32,638 main DEBUG Registering MBean org.apache.logging.log4j2:type=AsyncContext@464bee09,component=StatusLogger
-2022-02-21 16:55:32,638 main DEBUG Registering MBean org.apache.logging.log4j2:type=AsyncContext@464bee09,component=ContextSelector
-2022-02-21 16:55:32,638 main DEBUG Registering MBean org.apache.logging.log4j2:type=AsyncContext@464bee09,component=Loggers,name=
-2022-02-21 16:55:32,639 main DEBUG Registering MBean org.apache.logging.log4j2:type=AsyncContext@464bee09,component=Appenders,name=LogToConsole
-2022-02-21 16:55:32,640 main DEBUG Registering MBean org.apache.logging.log4j2:type=AsyncContext@464bee09,component=Appenders,name=LogToRollingFile
-//...
-2022-02-21 16:55:33,020 pool-1-thread-1 DEBUG Stopped LoggerContext[name=AsyncContext@464bee09, org.apache.logging.log4j.core.async.AsyncLoggerContext@45fd9a4d] with status true 
-```
-
-So we are done with configuring `asynchronous` logging in Log4j 2 using the `Log4jContextSelector` system property.
-You can optimize the performance of your Java by using The option for asynchronous in Log4J 2 tools.
+So we are done with configuring `docker` with oour `springboot` applications.
 
