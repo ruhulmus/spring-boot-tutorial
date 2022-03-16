@@ -4,8 +4,7 @@
 
 ### Maven Folder Structure :
 We have created `Dockerfile` at the root of the project.
-We only need this Dockerfile text file to dockerize the Spring Boot application.
-
+We only need this Dockerfile text file to `dockerize` the Spring Boot application.
 
 ### Maven `pom.xml` :
 Project dependencies. Nothing special here, just some Spring Boot dependencies.
@@ -148,5 +147,4 @@ It will run the jar file into `8089` Port (as we set the `server.port=8089` on `
 2022-03-16 15:52:34.852  INFO 5297 --- [           main] com.ruhulmus.SpringBootDocker            : Started SpringBootDocker in 4.027 seconds (JVM running for 5.352)
 ```
 
-So we are done with configuring `docker` with oour `springboot` applications.
-
+So we are done with configuring `docker` with our `springboot` applications.
