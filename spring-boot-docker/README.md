@@ -228,6 +228,11 @@ Now container run in `9000` port and it's mapping with application port `8089`.
 Here `run -d` to start the container in detach mode.
 Here `run -p` to map ports between docker container and application.
 
+![view](https://github.com/ruhulmus/spring-boot-tutorial/blob/main/spring-boot-docker/_screenshoot/api-response-docker.png)
+
+**So we are done with configuring `docker` with our `springboot` application.**
+
+### Few Basic Command for Docker :
 
 To see List of all containers:
 ```cmd
@@ -243,4 +248,3 @@ Stop a container by container id :
 ```cmd
 $ sudo docker stop 96c5adab1759
 ```
-So we are done with configuring `docker` with our `springboot` application.
