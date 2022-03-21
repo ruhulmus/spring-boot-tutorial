@@ -2,8 +2,10 @@
 
 ## Spring boot Docker Example
 
-### Maven Folder Structure :
+### Project Folder Structure :
+At first, We have created Maven based Spring boot application. Folder structure is below :
 
+![view](https://github.com/ruhulmus/spring-boot-tutorial/blob/main/spring-boot-docker/_screenshoot/folder-structure.png)
 
 ### Maven `pom.xml` :
 Project dependencies. Nothing special here, just some Spring Boot dependencies.
