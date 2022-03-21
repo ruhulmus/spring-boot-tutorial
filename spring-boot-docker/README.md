@@ -49,7 +49,7 @@ Project dependencies. Nothing special here, just some Spring Boot dependencies.
 </project>
 ```
  ### `application.properties` file : 
-Define application run port '8089'
+Define application server port '8089'
 
  ```yml
 server.port=8089
@@ -99,7 +99,7 @@ $ mvn clean install
 ```
 It will build a jar `spring-boot-docker-0.0.1-SNAPSHOT.jar` file under the `target` Location
 
-Now run another commend to run our build jar.
+Now run another command to run our build jar.
 ```cmd
 $ java -jar target/spring-boot-docker-0.0.1-SNAPSHOT.jar
 ```
