@@ -103,7 +103,7 @@ Now run another command to run our build jar.
 ```cmd
 $ java -jar target/spring-boot-docker-0.0.1-SNAPSHOT.jar
 ```
-It will run the `jar` file into `8089` Port (as we set the `server.port=8089` on `application.properties` file). The Output should be look like this in your terminal :
+It will run the `jar` file into `8089` Port (as we set the `server.port=8089` on `application.properties` file). The Output should be look like in your terminal :
 ```cmd
 2021-03-16 15:52:34.107  INFO 5297 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8089 (http)
 2021-03-16 15:52:34.137  INFO 5297 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
@@ -119,6 +119,8 @@ So that means our spring boot application is working fine.
 ## Docker Configuration :
 We have created `Dockerfile` at the root of the project.
 We only need this Dockerfile text file to `dockerize` the Spring Boot application.
+
+![view](https://github.com/ruhulmus/spring-boot-tutorial/blob/main/spring-boot-docker/_screenshoot/Dockerfile.png)
 
 ### `Dockerfile` file :
 A Dockerfile is a text file, contains all the commands to assemble the docker image. let's start configure the docker file
