@@ -122,7 +122,7 @@ We only need this Dockerfile text file to `dockerize` the Spring Boot applicatio
 
 ![view](https://github.com/ruhulmus/spring-boot-tutorial/blob/main/spring-boot-docker/_screenshoot/Dockerfile.png)
 
-### `Dockerfile` file :
+### Configure `Dockerfile` file :
 A Dockerfile is a text file, contains all the commands to assemble the docker image. let's start configure the docker file
  
 we can find more base images from the official [Docker Hub](https://hub.docker.com/u/adoptopenjdk)
@@ -180,6 +180,7 @@ $ COPY ${JAR_FILE} dockerapp.jar
 # java -jar /opt/app/dockerapp.jar
 $ ENTRYPOINT ["java","-jar","dockerapp.jar"]
 ```
+
 ### Docker Build, Run :
 
 For Docker image Build we need to use below command.
