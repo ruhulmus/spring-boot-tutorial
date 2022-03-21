@@ -120,7 +120,7 @@ Now we can try to check our rest api. Here we used `postman` as a rest client. Y
 ![view](https://github.com/ruhulmus/spring-boot-tutorial/blob/main/spring-boot-docker/_screenshoot/api-response.png)
 
 
-So that means our spring boot application rest api is working fine with `8089` port.
+**So that means our spring boot application, rest api is working fine with `8089` port.**
 
 ## Docker Configuration :
 We have created `Dockerfile` at the root of the project.
