@@ -114,6 +114,11 @@ It will run the `jar` file into `8089` Port (as we set the `server.port=8089` on
 2021-03-16 15:52:34.848  INFO 5297 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path ''
 2021-03-16 15:52:34.852  INFO 5297 --- [           main] com.ruhulmus.SpringBootDocker            : Started SpringBootDocker in 4.027 seconds (JVM running for 5.352)
 ```
+
+Now we can try to check via rest client, Here we used `postman` to test our rest api.
+![view](https://github.com/ruhulmus/spring-boot-tutorial/blob/main/spring-boot-docker/_screenshoot/api-response.png)
+
+
 So that means our spring boot application is working fine.
 
 ## Docker Configuration :
@@ -180,6 +185,10 @@ $ COPY ${JAR_FILE} dockerapp.jar
 # java -jar /opt/app/dockerapp.jar
 $ ENTRYPOINT ["java","-jar","dockerapp.jar"]
 ```
+
+Complete Dockerfile Screenshot: 
+
+![view](https://github.com/ruhulmus/spring-boot-tutorial/blob/main/spring-boot-docker/_screenshoot/complete-dockerfile.png)
 
 ### Docker Build, Run :
 
