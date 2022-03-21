@@ -49,7 +49,7 @@ Project dependencies. Nothing special here, just some Spring Boot dependencies.
 </project>
 ```
  ### `application.properties` file : 
-Define application server port '8089'
+Define application server port `8089`
 
  ```yml
 server.port=8089
@@ -99,7 +99,7 @@ $ mvn clean install
 ```
 It will build a jar `spring-boot-docker-0.0.1-SNAPSHOT.jar` file under the `target` Location
 
-Now run another command to run our build jar.
+Now run another command to run our jar file.
 ```cmd
 $ java -jar target/spring-boot-docker-0.0.1-SNAPSHOT.jar
 ```
@@ -115,11 +115,12 @@ It will run the `jar` file into `8089` Port (as we set the `server.port=8089` on
 2021-03-16 15:52:34.852  INFO 5297 --- [           main] com.ruhulmus.SpringBootDocker            : Started SpringBootDocker in 4.027 seconds (JVM running for 5.352)
 ```
 
-Now we can try to check via rest client, Here we used `postman` to test our rest api.
+Now we can try to check our rest api. Here we used `postman` as a rest client. You can use your preferred one.
+
 ![view](https://github.com/ruhulmus/spring-boot-tutorial/blob/main/spring-boot-docker/_screenshoot/api-response.png)
 
 
-So that means our spring boot application is working fine.
+So that means our spring boot application rest api is working fine with `8089` port.
 
 ## Docker Configuration :
 We have created `Dockerfile` at the root of the project.
