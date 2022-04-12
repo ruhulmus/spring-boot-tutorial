@@ -1,11 +1,11 @@
 # Spring boot tutorial
 
-## Spring boot Docker Example
+## Spring boot API Rate limiting is a strategy using Bucket4j
 
 ### Project Folder Structure :
 At first, We have created Maven based Spring boot application. Folder structure is below :
 
-![view](https://github.com/ruhulmus/spring-boot-tutorial/blob/main/spring-boot-docker/_screenshoot/folder-structure.png)
+![view](https://github.com/ruhulmus/spring-boot-tutorial/blob/main/spring-boot-bucket4j/_screenshoot/folder-structure.png)
 
 ### Maven `pom.xml` :
 Project dependencies. Nothing special here, just some Spring Boot dependencies.
@@ -22,10 +22,10 @@ Project dependencies. Nothing special here, just some Spring Boot dependencies.
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.ruhulmus</groupId>
-    <artifactId>spring-boot-docker</artifactId>
+    <artifactId>spring-boot-bucket4j</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-boot-docker</name>
-    <description>Spring boot Docker Example</description>
+    <name>spring-boot-bucket4j</name>
+    <description>Spring boot Bucket4j Example</description>
 
     <properties>
         <java.version>1.8</java.version>
