@@ -114,7 +114,7 @@ It will run the `jar` file into `8089` Port (as we set the `server.port=8089` on
 2021-03-16 15:52:34.287  INFO 5297 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1907 ms
 2021-03-16 15:52:34.554  INFO 5297 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
 2021-03-16 15:52:34.848  INFO 5297 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path ''
-2021-03-16 15:52:34.852  INFO 5297 --- [           main] com.ruhulmus.SpringBootDocker            : Started SpringBootDocker in 4.027 seconds (JVM running for 5.352)
+2021-03-16 15:52:34.852  INFO 5297 --- [           main] com.ruhulmus.SpringBootBucket4j            : Started SpringBootDocker in 4.027 seconds (JVM running for 5.352)
 ```
 
 Now we can try to check our rest api. Here we used `postman` as a rest client. You can use your preferred one.
