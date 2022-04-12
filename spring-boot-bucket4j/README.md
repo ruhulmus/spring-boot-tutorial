@@ -96,25 +96,25 @@ public class HelloController {
 Now Run the below commands :
 
 ```cmd
-$ cd spring-boot-docker
+$ cd spring-boot-bucket4j
 $ mvn clean install
 ```
-It will build a jar `spring-boot-docker-0.0.1-SNAPSHOT.jar` file under the `target` Location
+It will build a jar `spring-boot-bucket4j-0.0.1-SNAPSHOT.jar` file under the `target` Location
 
 Now run another command to run our jar file.
 ```cmd
-$ java -jar target/spring-boot-docker-0.0.1-SNAPSHOT.jar
+$ java -jar target/spring-boot-bucket4j-0.0.1-SNAPSHOT.jar
 ```
 It will run the `jar` file into `8089` Port (as we set the `server.port=8089` on `application.properties` file). The Output should be look like in your terminal :
 ```cmd
-2021-03-16 15:52:34.107  INFO 5297 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8089 (http)
-2021-03-16 15:52:34.137  INFO 5297 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-03-16 15:52:34.137  INFO 5297 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
-2021-03-16 15:52:34.287  INFO 5297 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-03-16 15:52:34.287  INFO 5297 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1907 ms
-2021-03-16 15:52:34.554  INFO 5297 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-03-16 15:52:34.848  INFO 5297 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path ''
-2021-03-16 15:52:34.852  INFO 5297 --- [           main] com.ruhulmus.SpringBootBucket4j            : Started SpringBootDocker in 4.027 seconds (JVM running for 5.352)
+2021-04-15 16:32:34.107  INFO 5297 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8089 (http)
+2021-04-15 16:32:34.137  INFO 5297 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-15 16:32:34.137  INFO 5297 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2021-04-15 16:32:34.287  INFO 5297 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-15 16:32:34.287  INFO 5297 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1907 ms
+2021-04-15 16:32:34.554  INFO 5297 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-15 16:32:34.848  INFO 5297 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path ''
+2021-04-15 16:32:34.852  INFO 5297 --- [           main] com.ruhulmus.SpringBootBucket4j            : Started SpringBootDocker in 4.027 seconds (JVM running for 5.352)
 ```
 
 Now we can try to check our rest api. Here we used `postman` as a rest client. You can use your preferred one.
