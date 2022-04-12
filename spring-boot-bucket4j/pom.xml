@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.ruhulmus</groupId>
-    <artifactId>spring-boot-docker</artifactId>
+    <artifactId>spring-boot-bucket4j</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-boot-docker</name>
-    <description>Spring boot Docker Example</description>
+    <name>spring-boot-bucket4j</name>
+    <description>Spring boot Bucket4j Example</description>
 
     <properties>
         <java.version>1.8</java.version>
