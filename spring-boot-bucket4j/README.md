@@ -90,8 +90,34 @@ bucket4j.filters[0].http-response-body={ "message": "Too many requests" }
   bucket4j.filters[0].rate-limits[0].bandwidths[0].capacity=2
   #rate per seconds
   bucket4j.filters[0].rate-limits[0].bandwidths[0].time=1
-  bucket4j.filters[0].rate-limits[0].bandwidths[0].unit=minutes
+  bucket4j.filters[0].rate-limits[0].bandwidths[0].unit=seconds
  ```
+Here 
+capacity=2 , time=1 and unit=seconds that means maximum 2 api call in 1 second duration
+
+create a file name `ehcache.xml` under `resource` directory and configure accordingly.
+Add bucket file location into `application.properties`
+```yml
+spring.cache.jcache.config=classpath:ehcache.xml
+```
+
+`ehcache.xml` File look like :
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:jsr107="http://www.ehcache.org/v3/jsr107"
+        xmlns='http://www.ehcache.org/v3'
+        xsi:schemaLocation="http://www.ehcache.org/v3 http://www.ehcache.org/schema/ehcache-core-3.0.xsd
+							http://www.ehcache.org/v3/jsr107 http://www.ehcache.org/schema/ehcache-107-ext-3.0.xsd">
+    <cache alias="buckets">
+        <expiry>
+            <tti unit="seconds">3600</tti>
+        </expiry>
+        <heap unit="entries">1000000</heap>
+        <jsr107:mbeans enable-statistics="true"/>
+    </cache>
+</config>
+```
 
 ### Configure `@SpringBootApplication` Class :
 `@SpringBootApplication` to start everything.
@@ -102,6 +128,7 @@ package com.ruhulmus;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+@EnableCaching
 @SpringBootApplication
 public class SpringBootBucket4j {
     public static void main(String[] args) {
@@ -156,8 +183,7 @@ It will run the `jar` file into `8089` Port (as we set the `server.port=8089` on
 
 Now we can try to check our rest api. Here we used `postman` as a rest client. You can use your preferred one.
 
-![view](https://github.com/ruhulmus/spring-boot-tutorial/blob/main/spring-boot-docker/_screenshoot/api-response.png)
-
+![view](https://github.com/ruhulmus/spring-boot-tutorial/blob/main/spring-boot-bucket4j/_screenshoot/api-response.png)
 
 **So that means our spring boot application, rest api is working fine with `8089` port.**
 
@@ -165,7 +191,7 @@ Now we can try to check our rest api. Here we used `postman` as a rest client. Y
 We have created `Dockerfile` at the root of the project.
 We only need this Dockerfile text file to `dockerize` the Spring Boot application.
 
-![view](https://github.com/ruhulmus/spring-boot-tutorial/blob/main/spring-boot-docker/_screenshoot/Dockerfile.png)
+![view](https://github.com/ruhulmus/spring-boot-tutorial/blob/main/spring-boot-bucket4j/_screenshoot/Dockerfile.png)
 
 ### Configure `Dockerfile` file :
 A Dockerfile is a text file, contains all the commands to assemble the docker image. let's start configure the docker file
