@@ -50,12 +50,49 @@ Project dependencies. Nothing special here, just some Spring Boot dependencies.
 
 </project>
 ```
+
+Add bucker4j + cache Dependancy into pom.xml
+
+```xml
+    <dependency>
+        <groupId>com.giffing.bucket4j.spring.boot.starter</groupId>
+        <artifactId>bucket4j-spring-boot-starter</artifactId>
+        <version>0.2.0</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-cache</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.ehcache</groupId>
+        <artifactId>ehcache</artifactId>
+    </dependency>
+```
+
  ### `application.properties` file : 
 Define application server port `8089`
 
  ```yml
 server.port=8089
  ```
+Now Configure bucket4j 
+ ```yml
+# enable/disable bucket4j support
+  bucket4j.enabled=true
+  # the name of the cache key
+  bucket4j.filters[0].cache-name=buckets
+# the json response which should be added to the body
+bucket4j.filters[0].http-response-body={ "message": "Too many requests" }
+# a regular expression
+  bucket4j.filters[0].url=.*
+  bucket4j.filters[0].metrics.enabled=true
+  #rate limit
+  bucket4j.filters[0].rate-limits[0].bandwidths[0].capacity=2
+  #rate per seconds
+  bucket4j.filters[0].rate-limits[0].bandwidths[0].time=1
+  bucket4j.filters[0].rate-limits[0].bandwidths[0].unit=minutes
+ ```
+
 ### Configure `@SpringBootApplication` Class :
 `@SpringBootApplication` to start everything.
 
