@@ -187,6 +187,6 @@ Now we can try to check our rest api. Here we used `postman` as a rest client. Y
 
 **So that means our spring boot application, rest api is working fine with `8089` port.**
 
-Now try to hit the same api more than 2 times within 1 sec. We will get status code `429` means Too Many Requests
+Now try to hit the same api more than 2 times within 1 sec. We will get status code `429` means Too Many Requests. APi response is look like :
 ![view](https://github.com/ruhulmus/spring-boot-tutorial/blob/main/spring-boot-bucket4j/_screenshoot/api_ratelimit_response.png)
 
